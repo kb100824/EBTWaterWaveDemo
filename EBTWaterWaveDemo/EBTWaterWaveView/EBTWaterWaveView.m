@@ -7,6 +7,7 @@
 //
 
 #import "EBTWaterWaveView.h"
+#define kMAXYValue  4.5
 #define kWeakSelf(weakSelf)  __weak __typeof(self)weakSelf = self
 @interface EBTWaterWaveView ()
 {
@@ -27,7 +28,7 @@
         self.backgroundColor = [UIColor clearColor];
         waveFrame = frame;
         wavedirection = NO;
-        waveMaxYValue = 1.0;
+        waveMaxYValue = kMAXYValue;
         waveXValue = 0;
         waterWaveView = [[UIView alloc]initWithFrame:self.bounds];
         [self addSubview:waterWaveView];
@@ -40,7 +41,7 @@
     self.backgroundColor = [UIColor clearColor];
     waveFrame = self.frame;
     wavedirection = NO;
-    waveMaxYValue = 1.0;
+    waveMaxYValue = kMAXYValue;
     waveXValue = 0;
     waterWaveView = [[UIView alloc]initWithFrame:self.bounds];
     [self addSubview:waterWaveView];
@@ -67,10 +68,10 @@
 - (void)waterFillWave{
 
     waveMaxYValue += wavedirection?0.01f:-0.01f;
-    if (waveMaxYValue<=1.0f) {
+    if (waveMaxYValue<=kMAXYValue) {
         wavedirection = YES;
     }
-    else if (waveMaxYValue>=1.0f){
+    else if (waveMaxYValue>=kMAXYValue){
         wavedirection = NO;
     }
     waveXValue += 0.1f;
