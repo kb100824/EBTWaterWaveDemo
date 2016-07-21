@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
    
-   // waveView = [[EBTWaterWaveView alloc]initWithFrame:CGRectMake(0, 80, kSCREEN_WIDTH, kSCREEN_HEIGHT)];
+    //waveView = [[EBTWaterWaveView alloc]initWithFrame:CGRectMake(0, 80, kSCREEN_WIDTH, kSCREEN_HEIGHT)];
     //[self.view addSubview:waveView];
   
     
@@ -39,14 +39,22 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)testClick:(id)sender {
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
     
-    [self.waterWaveView showWaterWaveViewWithDepath:0.87 withWaveFillColor:[[UIColor redColor] colorWithAlphaComponent:0.5] withWaveStillAnimate:YES withWaterWaveCompleteHandler:^(EBTWaterWaveView *waterWaveView, UIBezierPath *bezierPath) {
+    
+}
+- (IBAction)testClick:(UIButton *)sender {
+    
+    sender.enabled = NO;
+    [self.waterWaveView showWaterWaveViewWithDepath:0.27 withWaveFillColor:[[UIColor redColor] colorWithAlphaComponent:0.5] withWaveStillAnimate:YES withWaterWaveCompleteHandler:^(EBTWaterWaveView *waterWaveView, UIBezierPath *bezierPath) {
         
         
     }];
    
-    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        sender.enabled = YES;
+    });
 }
 
 @end

@@ -36,6 +36,7 @@
     return self;
 }
 - (void)awakeFromNib{
+    [self layoutIfNeeded];
     self.backgroundColor = [UIColor clearColor];
     waveFrame = self.frame;
     wavedirection = NO;
@@ -45,6 +46,8 @@
     [self addSubview:waterWaveView];
 
 }
+
+
 - (NSTimer *)timer{
 
     if (!_timer) {
@@ -78,6 +81,11 @@
 //绘制水波
 - (void)createWavePath{
 
+    /**xib或者sb需要重新布局frame获取最新的frame*/
+    [self layoutIfNeeded];
+    waterWaveView.frame = self.bounds;
+    waveFrame = self.bounds;
+    /**------------------------*/
     CAShapeLayer *shapelayer = [CAShapeLayer layer];
     UIBezierPath *path = [UIBezierPath bezierPath];
     CGFloat waterWaveY = (1 - (waterWaveDepath > 1.f? 1.f :waterWaveDepath)) * waveFrame.size.height;
@@ -113,7 +121,7 @@
     waterWaveCompleteHandler = waveCompleteHandler;
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
     
-    if (isStillAnimate) {
+    if (!isStillAnimate) {
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [weakSelf stopWaterWaveViewAnimation];
         });
