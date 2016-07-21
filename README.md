@@ -5,4 +5,4 @@
 
 
 #效果演示图
-[!Image](https://github.com/KBvsMJ/EBTWaterWaveDemo/blob/master/demogif/3.gif)
+![Image](https://github.com/KBvsMJ/EBTWaterWaveDemo/blob/master/demogif/3.gif)
