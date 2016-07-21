@@ -36,7 +36,7 @@
     return self;
 }
 - (void)awakeFromNib{
-    [self layoutIfNeeded];
+   
     self.backgroundColor = [UIColor clearColor];
     waveFrame = self.frame;
     wavedirection = NO;
@@ -81,11 +81,11 @@
 //绘制水波
 - (void)createWavePath{
 
-    /**xib或者sb需要重新布局frame获取最新的frame*/
+     /**----------xib或者sb需要重新布局frame获取最新的frame-------------*/
     [self layoutIfNeeded];
     waterWaveView.frame = self.bounds;
     waveFrame = self.bounds;
-    /**------------------------*/
+    /**----------xib或者sb需要重新布局frame获取最新的frame-------------*/
     CAShapeLayer *shapelayer = [CAShapeLayer layer];
     UIBezierPath *path = [UIBezierPath bezierPath];
     CGFloat waterWaveY = (1 - (waterWaveDepath > 1.f? 1.f :waterWaveDepath)) * waveFrame.size.height;
