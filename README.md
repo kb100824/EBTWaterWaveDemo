@@ -10,7 +10,9 @@
 
 然后:
 #纯代码使用示例:
+
 1:先创建水波动画view并添加self.view上面。
+
  waveView = [[EBTWaterWaveView alloc]initWithFrame:CGRectMake(0, 80, SCREEN_WIDTH, SCREEN_HEIGHT)];
 [self.view addSubview:waveView];
 
@@ -48,7 +50,9 @@
 
 然后:
 #纯代码使用示例:
+
 1:先创建水波动画view并添加self.view上面。
+
   customWaveView = [[EBTWaterImageWaveView alloc]initWithFrame:CGRectMake(120, 120, 105, 105)];
 [self.view addSubview:customWaveView];
 
