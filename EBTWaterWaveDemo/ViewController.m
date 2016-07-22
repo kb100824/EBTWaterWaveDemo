@@ -6,8 +6,8 @@
 //  Copyright © 2016年 com.csst. All rights reserved.
 //
 
-#define kSCREEN_HEIGHT [[UIScreen mainScreen]bounds].size.height
-#define kSCREEN_WIDTH [[UIScreen mainScreen]bounds].size.width
+#define SCREEN_HEIGHT [[UIScreen mainScreen]bounds].size.height
+#define SCREEN_WIDTH [[UIScreen mainScreen]bounds].size.width
 
 #import "ViewController.h"
 #import "EBTWaterWaveView.h"
@@ -55,6 +55,10 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         sender.enabled = YES;
     });
+    
+    
+    
+    
 }
 
 @end

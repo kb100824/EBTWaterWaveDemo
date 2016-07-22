@@ -13,7 +13,7 @@
 {
     CGRect  waveFrame; //frame
     BOOL    wavedirection;//方向
-    CGFloat waveMaxYValue ;//用来控制y坐标的值 最大值为1.0
+    CGFloat waveMaxYValue ;//用来控制y坐标的值
     CGFloat waveXValue;//改变x坐标的值
     CGFloat waterWaveDepath;//设置水的深度
     UIView  *waterWaveView; //填充水位的view

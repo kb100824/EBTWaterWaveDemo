@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7D1D87381D41BBD60068B430 /* EBTWaterImageWaveView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1D87371D41BBD60068B430 /* EBTWaterImageWaveView.m */; };
+		7D1D873B1D41F0260068B430 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1D873A1D41F0260068B430 /* SecondViewController.m */; };
 		7DBFB4C21D40ADDE00747E19 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBFB4C11D40ADDE00747E19 /* main.m */; };
 		7DBFB4C51D40ADDE00747E19 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBFB4C41D40ADDE00747E19 /* AppDelegate.m */; };
 		7DBFB4C81D40ADDE00747E19 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DBFB4C71D40ADDE00747E19 /* ViewController.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7D1D87361D41BBD60068B430 /* EBTWaterImageWaveView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EBTWaterImageWaveView.h; sourceTree = "<group>"; };
+		7D1D87371D41BBD60068B430 /* EBTWaterImageWaveView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EBTWaterImageWaveView.m; sourceTree = "<group>"; };
+		7D1D87391D41F0260068B430 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		7D1D873A1D41F0260068B430 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		7DBFB4BD1D40ADDE00747E19 /* EBTWaterWaveDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EBTWaterWaveDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DBFB4C11D40ADDE00747E19 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DBFB4C31D40ADDE00747E19 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +120,8 @@
 				7DBFB4CE1D40ADDE00747E19 /* LaunchScreen.storyboard */,
 				7DBFB4D11D40ADDE00747E19 /* Info.plist */,
 				7DBFB4C01D40ADDE00747E19 /* Supporting Files */,
+				7D1D87391D41F0260068B430 /* SecondViewController.h */,
+				7D1D873A1D41F0260068B430 /* SecondViewController.m */,
 			);
 			path = EBTWaterWaveDemo;
 			sourceTree = "<group>";
@@ -149,6 +157,8 @@
 			children = (
 				7DBFB4F41D40AE2600747E19 /* EBTWaterWaveView.h */,
 				7DBFB4F51D40AE2600747E19 /* EBTWaterWaveView.m */,
+				7D1D87361D41BBD60068B430 /* EBTWaterImageWaveView.h */,
+				7D1D87371D41BBD60068B430 /* EBTWaterImageWaveView.m */,
 			);
 			path = EBTWaterWaveView;
 			sourceTree = "<group>";
@@ -284,7 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D1D873B1D41F0260068B430 /* SecondViewController.m in Sources */,
 				7DBFB4C81D40ADDE00747E19 /* ViewController.m in Sources */,
+				7D1D87381D41BBD60068B430 /* EBTWaterImageWaveView.m in Sources */,
 				7DBFB4F61D40AE2600747E19 /* EBTWaterWaveView.m in Sources */,
 				7DBFB4C51D40ADDE00747E19 /* AppDelegate.m in Sources */,
 				7DBFB4C21D40ADDE00747E19 /* main.m in Sources */,
@@ -513,6 +525,7 @@
 				7DBFB4EC1D40ADDE00747E19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DBFB4ED1D40ADDE00747E19 /* Build configuration list for PBXNativeTarget "EBTWaterWaveDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +534,7 @@
 				7DBFB4EF1D40ADDE00747E19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DBFB4F01D40ADDE00747E19 /* Build configuration list for PBXNativeTarget "EBTWaterWaveDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +543,7 @@
 				7DBFB4F21D40ADDE00747E19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
