@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @class EBTWaterWaveView;
-typedef void(^EBTWaterWaveViewCompleteHandler)(EBTWaterWaveView *waterWaveView,UIBezierPath *bezierPath);
+typedef void(^EBTWaterWaveViewCompleteHandler)(EBTWaterWaveView *waterWaveView);
+/**
+ *  用uiview来实现水波动画
+ */
 @interface EBTWaterWaveView : UIView
 {
     EBTWaterWaveViewCompleteHandler waterWaveCompleteHandler;

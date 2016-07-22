@@ -7,7 +7,7 @@
 //
 
 #import "EBTWaterWaveView.h"
-#define kMAXYValue  4.5
+#define kMAXYValue  2.5
 #define kWeakSelf(weakSelf)  __weak __typeof(self)weakSelf = self
 @interface EBTWaterWaveView ()
 {
@@ -18,6 +18,7 @@
     CGFloat waterWaveDepath;//设置水的深度
     UIView  *waterWaveView; //填充水位的view
     UIColor *waterWaveColor; //view的背景颜色
+  
 }
 @property(nonatomic,strong) NSTimer *timer;
 @end
@@ -45,6 +46,7 @@
     waveXValue = 0;
     waterWaveView = [[UIView alloc]initWithFrame:self.bounds];
     [self addSubview:waterWaveView];
+    
 
 }
 
@@ -92,14 +94,11 @@
     CGFloat waterWaveY = (1 - (waterWaveDepath > 1.f? 1.f :waterWaveDepath)) * waveFrame.size.height;
      CGFloat y = waterWaveY;
     [path moveToPoint:CGPointMake(0, y)];
-    
     path.lineWidth = 1.f;
-    
     for (CGFloat x = 0; x<= waveFrame.size.width; x++) {
         y = waveMaxYValue*sin(x/180*M_PI+4*waveXValue/M_PI)*5 + waterWaveY;
         [path addLineToPoint:CGPointMake(x, y)];
     }
-    
     [path addLineToPoint:CGPointMake(waveFrame.size.width, y)];
     [path addLineToPoint:CGPointMake(waveFrame.size.width, waveFrame.size.height)];
     [path addLineToPoint:CGPointMake(0, waveFrame.size.height)];
@@ -108,7 +107,7 @@
     waterWaveView.backgroundColor = waterWaveColor;
     [path closePath];
     if (waterWaveCompleteHandler) {
-        waterWaveCompleteHandler(self,path);
+        waterWaveCompleteHandler(self);
     }
     
     

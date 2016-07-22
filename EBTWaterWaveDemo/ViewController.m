@@ -47,7 +47,7 @@
 - (IBAction)testClick:(UIButton *)sender {
     
     sender.enabled = NO;
-    [self.waterWaveView showWaterWaveViewWithDepath:0.57 withWaveFillColor:[[UIColor redColor] colorWithAlphaComponent:0.5] withWaveStillAnimate:YES withWaterWaveCompleteHandler:^(EBTWaterWaveView *waterWaveView, UIBezierPath *bezierPath) {
+    [self.waterWaveView showWaterWaveViewWithDepath:0.77 withWaveFillColor:[[UIColor redColor] colorWithAlphaComponent:0.5] withWaveStillAnimate:YES withWaterWaveCompleteHandler:^(EBTWaterWaveView *waterWaveView) {
         
         
     }];
