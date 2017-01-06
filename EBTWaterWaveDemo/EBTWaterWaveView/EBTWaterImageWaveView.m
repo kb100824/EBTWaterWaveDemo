@@ -52,7 +52,7 @@
     return self;
 }
 - (void)awakeFromNib{
-    
+    [super awakeFromNib];
     self.backgroundColor = [UIColor clearColor];
     waveImageDirection = NO;
     waveImageMaxYValue = kMAXYValue;

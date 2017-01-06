@@ -38,7 +38,7 @@
     return self;
 }
 - (void)awakeFromNib{
-   
+   [super awakeFromNib];
     self.backgroundColor = [UIColor clearColor];
     waveFrame = self.frame;
     wavedirection = NO;
