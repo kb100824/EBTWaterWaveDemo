@@ -3,10 +3,9 @@
 # 可以通过设置对应的参数来控制水波动画是否一直执行。
 
 #使用pod指令添加类库文件到项目中
-<ul>
- <li> pod 'EBTWaterWaveView'
-</li>
-</ul>
+```
+ pod 'EBTWaterWaveView'
+```
 
 
 #用UIView实现水波动画操作过程
